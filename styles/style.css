@@ -473,7 +473,8 @@ button:focus {
   z-index: 1;
 }
 .blog_banner .banner_inner .overlay {
-  /*      background: url(../img/banner/banner-2.jpg) no-repeat center center;*/
+  /*      background: url(../img/banner/banner-2.jpg) no-repeat center center;
+*/
   opacity: 0.5;
   height: 125%;
   position: absolute;
@@ -3381,7 +3382,7 @@ h6 {
 }
 
 .primary-radio input:checked + label {
-  background: url(../img/elements/primary-radio.png) no-repeat center
+  background: /*url(../img/elements/primary-radio.png)*/ no-repeat center
     center/cover;
   border: none;
 }
@@ -3420,7 +3421,7 @@ h6 {
 }
 
 .confirm-radio input:checked + label {
-  background: url(../img/elements/success-radio.png) no-repeat center
+  background: /*url(../img/elements/success-radio.png)*/ no-repeat center
     center/cover;
   border: none;
 }
@@ -3475,7 +3476,7 @@ h6 {
 }
 
 .disabled-radio input:checked + label {
-  background: url(../img/elements/disabled-radio.png) no-repeat center
+  background: /*url(../img/elements/disabled-radio.png)*/ no-repeat center
     center/cover;
   border: none;
 }
