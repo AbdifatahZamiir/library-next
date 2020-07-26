@@ -2,35 +2,11 @@ export default function Header() {
 	return (
 		<header className="header_area">
 			<div className="main_menu">
-				<div className="search_input" id="search_input_box">
-					<div className="container">
-						<form
-							className="d-flex justify-content-between"
-							method=""
-							action=""
-						>
-							<input
-								type="text"
-								className="form-control"
-								id="search_input"
-								placeholder="Search Here"
-							/>
-							<button type="submit" className="btn"></button>
-							<span
-								className="ti-close"
-								id="close_search"
-								title="Close Search"
-							></span>
-						</form>
-					</div>
-				</div>
-
 				<nav className="navbar navbar-expand-lg navbar-light">
 					<div className="container">
-						<a
-							className="navbar-brand logo_h"
-							href="index.html"
-						></a>
+						<a className="navbar-brand logo_h" href="#">
+							<img src="/images/logo.png" alt="logo" />
+						</a>
 						<button
 							className="navbar-toggler"
 							type="button"
@@ -77,7 +53,7 @@ export default function Header() {
 										<li className="nav-item">
 											<a
 												className="nav-link"
-												href="courses.html"
+												href="index"
 											>
 												Courses
 											</a>
@@ -85,7 +61,7 @@ export default function Header() {
 										<li className="nav-item">
 											<a
 												className="nav-link"
-												href="course-details.html"
+												href="index"
 											>
 												Course Details
 											</a>
@@ -93,7 +69,7 @@ export default function Header() {
 										<li className="nav-item">
 											<a
 												className="nav-link"
-												href="elements.html"
+												href="index"
 											>
 												Elements
 											</a>
@@ -115,7 +91,7 @@ export default function Header() {
 										<li className="nav-item">
 											<a
 												className="nav-link"
-												href="blog.html"
+												href="index"
 											>
 												Blog
 											</a>
@@ -123,7 +99,7 @@ export default function Header() {
 										<li className="nav-item">
 											<a
 												className="nav-link"
-												href="single-blog.html"
+												href="index"
 											>
 												Blog Details
 											</a>
@@ -131,7 +107,7 @@ export default function Header() {
 									</ul>
 								</li>
 								<li className="nav-item">
-									<a className="nav-link" href="contact.html">
+									<a className="nav-link" href="index">
 										Contact
 									</a>
 								</li>
