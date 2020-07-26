@@ -4,7 +4,7 @@ export default function Header() {
 			<div className="main_menu">
 				<nav className="navbar navbar-expand-lg navbar-light">
 					<div className="container">
-						<a className="navbar-brand logo_h" href="#">
+						<a className="navbar-brand logo_h" href="index">
 							<img src="/images/logo.png" alt="logo" />
 						</a>
 						<button
