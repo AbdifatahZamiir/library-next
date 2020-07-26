@@ -639,6 +639,10 @@ button:focus {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+
+.single_feature .desc h4 {
+  color: #002347;
+}
 @media (max-width: 480px) {
   .single_feature {
     padding: 40px 20px;
@@ -4186,3 +4190,10 @@ h6 {
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
+
+/*-------*/
+
+.icons {
+  width: 3rem;
+  height: 3rem;
+}
