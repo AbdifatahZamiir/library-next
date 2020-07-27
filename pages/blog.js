@@ -1,9 +1,11 @@
 import Layout from "../components/layout";
 import Slider from "../components/slider";
+import Banner from "../components/banner_area";
 
 export default function Blog() {
 	return (
-		<Layout>
+		<Layout white="white-header">
+			<Banner title="Blog" home="Home" path="blog" />
 			<section className="blog_area section_gap">
 				<div className="container">
 					<div className="row">
@@ -627,8 +629,6 @@ export default function Blog() {
 												className="form-control"
 												id="inlineFormInputGroup"
 												placeholder="Enter email"
-												onfocus="this.placeholder = ''"
-												onblur="this.placeholder = 'Enter email'"
 											/>
 										</div>
 										<a href="#" className="bbtns">

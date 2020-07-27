@@ -1,8 +1,10 @@
 import Layout from "../components/layout";
+import Banner from "../components/banner_area";
 
 export default function () {
 	return (
-		<Layout>
+		<Layout white="white-header">
+			<Banner title="Blog Detail" home="Home " path="blog-detail" />
 			<section className="blog_area single-post-area section_gap">
 				<div className="container">
 					<div className="row">

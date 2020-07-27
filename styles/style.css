@@ -549,7 +549,7 @@ button:focus {
   color: #fff;
 }
 .banner_area .banner_inner .banner_content h2 {
-  color: #fff;
+  color: #fff !important;
   font-size: 45px;
   margin-bottom: 0px;
 }

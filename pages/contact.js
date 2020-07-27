@@ -1,8 +1,10 @@
 import Layout from "../components/layout";
+import Banner from "../components/banner_area";
 
 export default function Contact() {
 	return (
-		<Layout>
+		<Layout white="white-header">
+			<Banner title="Contact" home="Home " path="contact" />
 			<section className="contact_area section_gap">
 				<div className="container">
 					<div
