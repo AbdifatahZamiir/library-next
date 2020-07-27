@@ -428,11 +428,22 @@ button:focus {
   min-height: 900px;
   position: relative;
   background: url(/images/banner/home-banner.jpg) no-repeat center;
-
   background-size: cover;
 }
-.home_banner_area .banner_inner {
+/*.home_banner_area .banner_inner {
   position: absolute;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 100%;
+}
+*/
+.home_banner_area .test_banner {
+  position: absolute !important;
   top: 40%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -447,11 +458,15 @@ button:focus {
     top: 50%;
   }
 }
-.home_banner_area .banner_inner .banner_content h2 {
+.home_banner_area .test_banner .banner_content {
+  margin-top: 0 !important;
+}
+.home_banner_area .test_banner .banner_content h2 {
   font-size: 48px;
+  color: #002347;
   font-weight: 500;
 }
-.home_banner_area .banner_inner .banner_content p {
+.home_banner_area .test_banner .banner_content p {
   font-size: 20px;
   color: #002347;
   font-weight: 500;
@@ -4194,3 +4209,26 @@ h6 {
   width: 3rem;
   height: 3rem;
 }
+/*cursor css
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after {
+  content: ">";
+  font-size: 55px;
+  color: red;
+}
+
+.carousel-control-prev-icon:after {
+  content: "<";
+  font-size: 55px;
+  color: red;
+}
+*/
