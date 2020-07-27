@@ -43,7 +43,7 @@ export default function About() {
 					</div>
 				</div>
 			</section>
-			<section className="feature_area section_gap_top title-bg">
+			<section className="feature_area section_gap_top title-bg mb-5">
 				<div className="container">
 					<div className="row justify-content-center">
 						<div className="col-lg-5">
