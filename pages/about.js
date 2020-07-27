@@ -3,7 +3,7 @@ import Banner from "../components/banner_area";
 export default function About() {
 	return (
 		<Layout white="white-header">
-			<Banner title="About" home="Home " path="/ about" />
+			<Banner title="About" home="Home " path="about" />
 			<section className="about_area section_gap">
 				<div className="container">
 					<div className="row h_blog_item">
