@@ -101,7 +101,7 @@ export default function Footer() {
 								>
 									<input
 										name="b_36c4fd991d266f23781ded980_aefe40901a"
-										tabindex="-1"
+										tabIndex="-1"
 										value=""
 										type="text"
 									/>

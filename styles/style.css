@@ -28,7 +28,7 @@ body {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #7b838a;
+  color: #7b838a !important;
 }
 
 h1,
@@ -39,7 +39,7 @@ h5,
 h6 {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
-  color: #002347;
+  color: #002347 !important;
 }
 
 .list {
@@ -654,6 +654,7 @@ button:focus {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+
 @media (max-width: 480px) {
   .single_feature {
     padding: 40px 20px;
@@ -662,11 +663,11 @@ button:focus {
 .single_feature .icon span {
   font-size: 30px;
 }
-.single_feature h4 {
+.single_feature .desc h4 {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
 }
-.single_feature p {
+.single_feature .desc p {
   margin-bottom: 0px;
 }
 .single_feature:hover {
@@ -4202,6 +4203,12 @@ h6 {
 
 /*# sourceMappingURL=style.css.map */
 
+/*-------*/
+
+.icons {
+  width: 3rem;
+  height: 3rem;
+}
 /*cursor css
 
 .carousel-control-prev-icon,
