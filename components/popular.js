@@ -7,7 +7,6 @@ export default function Popular() {
 	return (
 		<div className="popular_courses ">
 			<div className="container">
-				{" "}
 				<div className="row justify-content-center">
 					<div className="col-lg-5">
 						<div className="main_title">
