@@ -1,5 +1,6 @@
 import Layout from "../components/layout";
 import Banner from "../components/banner_area";
+import Map from "../reactComponents/map";
 
 export default function Contact() {
 	return (
@@ -7,16 +8,9 @@ export default function Contact() {
 			<Banner title="Contact" home="Home " path="contact" />
 			<section className="contact_area section_gap">
 				<div className="container">
-					<div
-						id="mapBox"
-						className="mapBox"
-						data-lat="40.701083"
-						data-lon="-74.1522848"
-						data-zoom="13"
-						data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia."
-						data-mlat="40.701083"
-						data-mlon="-74.1522848"
-					></div>
+					<div className="row mb-5">
+						<Map />
+					</div>
 					<div className="row">
 						<div className="col-lg-3">
 							<div className="contact_info">
