@@ -17,7 +17,7 @@ export default function Popular() {
 					</div>
 				</div>
 			</div>
-			<CarouselWrapper className="carousel-control-prev-icon carousel-control-next-icon">
+			<CarouselWrapper>
 				<Carousel>
 					<Carousel.Item>
 						<div className="container">
