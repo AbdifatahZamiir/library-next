@@ -6,14 +6,16 @@ const CarouselWrapper = styled.div``;
 export default function Popular() {
 	return (
 		<div className="popular_courses">
-			<div className="row justify-content-center">
-				<div className="col-lg-5">
-					<div className="main_title">
-						<h2 className="mb-3">Our Popular Courses</h2>
-						<p>
-							Replenish man have thing gathering lights yielding
-							shall you
-						</p>
+			<div className="container">
+				<div className="row justify-content-center">
+					<div className="col-lg-5">
+						<div className="main_title">
+							<h2 className="mb-3">Our Popular Courses</h2>
+							<p>
+								Replenish man have thing gathering lights
+								yielding shall you
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
