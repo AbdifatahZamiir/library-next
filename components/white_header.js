@@ -1,13 +1,17 @@
 import Link from "next/link";
 
-export default function Header() {
+export default function WhiteHeader() {
 	return (
-		<header className="header_area">
+		<header className="header_area white-header">
 			<div className="main_menu">
 				<nav className="navbar navbar-expand-lg navbar-light">
 					<div className="container">
-						<a className="navbar-brand logo_h" href="index">
-							<img src="/images/logo.png" alt="logo" />
+						<a className="navbar-brand" href="index.html">
+							<img
+								className="logo-2"
+								src="/images/logo2.png"
+								alt=""
+							/>
 						</a>
 						<button
 							className="navbar-toggler"
@@ -27,15 +31,18 @@ export default function Header() {
 							id="navbarSupportedContent"
 						>
 							<ul className="nav navbar-nav menu_nav ml-auto">
-								<li className="nav-item active">
+								<li className="nav-item">
 									<Link href="/">
 										<a className="nav-link">Home</a>
 									</Link>
 								</li>
-								<li className="nav-item">
-									<Link href="/about">
-										<a className="nav-link">About</a>
-									</Link>
+								<li className="nav-item active">
+									<a
+										className="nav-link"
+										href="about-us.html"
+									>
+										About
+									</a>
 								</li>
 								<li className="nav-item submenu dropdown">
 									<Link href="#">
@@ -53,7 +60,7 @@ export default function Header() {
 										<li className="nav-item">
 											<a
 												className="nav-link"
-												href="index"
+												href="courses.html"
 											>
 												Courses
 											</a>
@@ -61,7 +68,7 @@ export default function Header() {
 										<li className="nav-item">
 											<a
 												className="nav-link"
-												href="index"
+												href="course-details.html"
 											>
 												Course Details
 											</a>
@@ -69,7 +76,7 @@ export default function Header() {
 										<li className="nav-item">
 											<a
 												className="nav-link"
-												href="index"
+												href="elements.html"
 											>
 												Elements
 											</a>
@@ -91,7 +98,7 @@ export default function Header() {
 										<li className="nav-item">
 											<a
 												className="nav-link"
-												href="index"
+												href="blog.html"
 											>
 												Blog
 											</a>
@@ -99,7 +106,7 @@ export default function Header() {
 										<li className="nav-item">
 											<a
 												className="nav-link"
-												href="index"
+												href="single-blog.html"
 											>
 												Blog Details
 											</a>
@@ -107,17 +114,8 @@ export default function Header() {
 									</ul>
 								</li>
 								<li className="nav-item">
-									<a className="nav-link" href="index">
+									<a className="nav-link" href="contact.html">
 										Contact
-									</a>
-								</li>
-								<li className="nav-item">
-									<a
-										href="#"
-										className="nav-link search"
-										id="search"
-									>
-										<i className="ti-search"></i>
 									</a>
 								</li>
 							</ul>

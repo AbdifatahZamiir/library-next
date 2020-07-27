@@ -85,8 +85,6 @@ export default function Footer() {
 									className="form-control"
 									name="EMAIL"
 									placeholder="Your Email Address"
-									onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Your Email Address'"
 									required=""
 									type="email"
 								/>
@@ -102,7 +100,6 @@ export default function Footer() {
 									<input
 										name="b_36c4fd991d266f23781ded980_aefe40901a"
 										tabIndex="-1"
-										value=""
 										type="text"
 									/>
 								</div>
@@ -115,10 +112,8 @@ export default function Footer() {
 				<div className="row footer-bottom d-flex justify-content-between">
 					<p className="col-lg-8 col-sm-12 footer-text m-0 text-white">
 						Copyright &copy;
-						<script>
-							document.write(new Date().getFullYear());
-						</script>{" "}
-						All rights reserved | This template is made with{" "}
+						<span>{new Date().getFullYear()}</span> All rights
+						reserved | This template is made with{" "}
 						<i className="ti-heart" aria-hidden="true"></i> by{" "}
 						<a href="https://colorlib.com" target="_blank">
 							Colorlib
