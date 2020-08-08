@@ -1,6 +1,7 @@
 import { FaUser, FaHeart } from "react-icons/fa";
 import Link from "next/link";
-export default function Books() {
+export default function Books(props) {
+	console.log("heelo")
 	return (
 		<div className="popular_courses ">
 			<div className="container">

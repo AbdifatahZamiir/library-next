@@ -28,14 +28,14 @@ export default function Header() {
 						>
 							<ul className="nav navbar-nav menu_nav ml-auto">
 								<li className="nav-item">
-									<Link href="/" activeClassName="active">
+									<Link href="/">
 										<a className="nav-link">Home</a>
 									</Link>
 								</li>
 								<li className="nav-item">
 									<Link
 										href="/about"
-										activeClassName="active"
+										
 									>
 										<a className="nav-link">About</a>
 									</Link>
@@ -43,7 +43,6 @@ export default function Header() {
 								<li className="nav-item submenu dropdown">
 									<Link
 										href="/books"
-										activeClassName="active"
 									>
 										<a
 											className="nav-link dropdown-toggle"
@@ -57,7 +56,7 @@ export default function Header() {
 									</Link>
 								</li>
 								<li className="nav-item submenu dropdown">
-									<Link href="/blog" activeClassName="active">
+									<Link href="/blog" >
 										<a
 											className="nav-link dropdown-toggle"
 											data-toggle="dropdown"
@@ -72,7 +71,7 @@ export default function Header() {
 								<li className="nav-item">
 									<Link
 										href="/contact"
-										activeClassName="active"
+										
 									>
 										<a className="nav-link">Contact</a>
 									</Link>

@@ -1,6 +1,6 @@
 import Layout from "../components/layout";
 import Banner from "../components/banner_area";
-import Map from "../reactComponents/map";
+import Map from "../components/map";
 
 export default function Contact() {
 	return (
