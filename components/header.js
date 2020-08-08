@@ -27,18 +27,24 @@ export default function Header() {
 							id="navbarSupportedContent"
 						>
 							<ul className="nav navbar-nav menu_nav ml-auto">
-								<li className="nav-item active">
-									<Link href="/">
+								<li className="nav-item">
+									<Link href="/" activeClassName="active">
 										<a className="nav-link">Home</a>
 									</Link>
 								</li>
 								<li className="nav-item">
-									<Link href="/about">
+									<Link
+										href="/about"
+										activeClassName="active"
+									>
 										<a className="nav-link">About</a>
 									</Link>
 								</li>
 								<li className="nav-item submenu dropdown">
-									<Link href="#">
+									<Link
+										href="/books"
+										activeClassName="active"
+									>
 										<a
 											className="nav-link dropdown-toggle"
 											data-toggle="dropdown"
@@ -46,40 +52,13 @@ export default function Header() {
 											aria-haspopup="true"
 											aria-expanded="false"
 										>
-											Pages
+											Books
 										</a>
 									</Link>
-									<ul className="dropdown-menu">
-										<li className="nav-item">
-											<a
-												className="nav-link"
-												href="index"
-											>
-												Courses
-											</a>
-										</li>
-										<li className="nav-item">
-											<a
-												className="nav-link"
-												href="index"
-											>
-												Course Details
-											</a>
-										</li>
-										<li className="nav-item">
-											<a
-												className="nav-link"
-												href="index"
-											>
-												Elements
-											</a>
-										</li>
-									</ul>
 								</li>
 								<li className="nav-item submenu dropdown">
-									<Link href="/about">
+									<Link href="/blog" activeClassName="active">
 										<a
-											href="#"
 											className="nav-link dropdown-toggle"
 											data-toggle="dropdown"
 											role="button"
@@ -89,29 +68,12 @@ export default function Header() {
 											Blog
 										</a>
 									</Link>
-
-									<ul className="dropdown-menu">
-										<li className="nav-item">
-											<Link href="/blog">
-												<a
-													className="nav-link"
-													href="blog"
-												>
-													Blog
-												</a>
-											</Link>
-										</li>
-										<li className="nav-item">
-											<Link href="/blog-detail">
-												<a className="nav-link">
-													Blog Details
-												</a>
-											</Link>
-										</li>
-									</ul>
 								</li>
 								<li className="nav-item">
-									<Link href="/contact">
+									<Link
+										href="/contact"
+										activeClassName="active"
+									>
 										<a className="nav-link">Contact</a>
 									</Link>
 								</li>
