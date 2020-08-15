@@ -1,8 +1,7 @@
 import { FaUser, FaHeart } from "react-icons/fa";
 import Link from "next/link";
 
-
-export default function Books(props) {
+export default function Books({ posts }) {
 	return (
 		<div className="popular_courses ">
 			<div className="container">
@@ -20,66 +19,82 @@ export default function Books(props) {
 			</div>
 			<div className="container">
 				<div className="row">
-					<div className="col-lg-4 col-md-6 col-sm-12 single_course">
-						<div className="course_head">
-							<img
-								className="img-fluid"
-								style={{ width: `100%`, height: `25rem` }}
-								src="/images/cover1.jpg"
-								alt="course2"
-							/>
-						</div>
-						<div className="course_content">
-							<span className="tag mb-4 d-inline-block">
-								<Link href="/">
-									<a
-										style={{
-											color: `#fff`,
-										}}
-									>
-										Read More
-									</a>
-								</Link>
-							</span>
-							<h4 className="mb-3">
-								<a href="course-details.html">
-									Custom Product Read More
-								</a>
-							</h4>
-
-							<div className="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4">
-								<div className="authr_meta">
+					{posts.map((post) => {
+						const {
+							id,
+							bookImg,
+							avatar,
+							authorName,
+							title,
+							purchase,
+							like,
+						} = post;
+						return (
+							<div className="col-lg-4 col-md-6 col-sm-12 single_course">
+								<div className="	course_head">
 									<img
-										src="/images/courses/author1.png"
-										alt=""
+										className="img-fluid"
+										style={{
+											width: `100%`,
+											height: `25rem`,
+										}}
+										src={bookImg}
+										alt="course2"
 									/>
-									<span className="d-inline-block ml-2">
-										Cameron
-									</span>
 								</div>
-								<div className="mt-lg-0 mt-3">
-									<span className="meta_info mr-4">
-										<a href="#">
-											{" "}
-											<i className="ti-user mr-2">
-												<FaUser />
-											</i>
-											25{" "}
-										</a>
+								<div className="course_content">
+									<span className="tag mb-4 d-inline-block">
+										<Link
+											href="/posts/[id]"
+											as={`/posts/${id}`}
+										>
+											<a
+												style={{
+													color: `#fff`,
+												}}
+											>
+												Read More
+											</a>
+										</Link>
 									</span>
-									<span className="meta_info">
-										<a href="#">
-											{" "}
-											<i className="ti-heart mr-2">
-												<FaHeart />
-											</i>
-											35{" "}
+									<h4 className="mb-3">
+										<a href="course-details.html">
+											{title}
 										</a>
-									</span>
+									</h4>
+
+									<div className="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4">
+										<div className="authr_meta">
+											<img src={avatar} alt="" />
+											<span className="d-inline-block ml-2">
+												{authorName}
+											</span>
+										</div>
+										<div className="mt-lg-0 mt-3">
+											<span className="meta_info mr-4">
+												<a href="#">
+													{" "}
+													<i className="ti-user mr-2">
+														<FaUser />
+													</i>
+													{purchase}
+												</a>
+											</span>
+											<span className="meta_info">
+												<a href="#">
+													{" "}
+													<i className="ti-heart mr-2">
+														<FaHeart />
+													</i>
+													{like}{" "}
+												</a>
+											</span>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
-					</div>
+						);
+					})}
 				</div>
 			</div>
 		</div>
