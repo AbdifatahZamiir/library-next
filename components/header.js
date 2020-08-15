@@ -33,17 +33,16 @@ export default function Header() {
 									</Link>
 								</li>
 								<li className="nav-item">
-									<Link
-										href="/about"
-										
-									>
+
+
+
+									<Link href="/about">
 										<a className="nav-link">About</a>
 									</Link>
 								</li>
 								<li className="nav-item submenu dropdown">
-									<Link
-										href="/books"
-									>
+
+									<Link href="/books">
 										<a
 											className="nav-link dropdown-toggle"
 											data-toggle="dropdown"
@@ -56,7 +55,8 @@ export default function Header() {
 									</Link>
 								</li>
 								<li className="nav-item submenu dropdown">
-									<Link href="/blog" >
+
+									<Link href="/blog">
 										<a
 											className="nav-link dropdown-toggle"
 											data-toggle="dropdown"
@@ -69,10 +69,8 @@ export default function Header() {
 									</Link>
 								</li>
 								<li className="nav-item">
-									<Link
-										href="/contact"
-										
-									>
+
+									<Link href="/contact">
 										<a className="nav-link">Contact</a>
 									</Link>
 								</li>

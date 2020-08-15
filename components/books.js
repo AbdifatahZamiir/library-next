@@ -1,7 +1,8 @@
 import { FaUser, FaHeart } from "react-icons/fa";
 import Link from "next/link";
+
+
 export default function Books(props) {
-	console.log("heelo")
 	return (
 		<div className="popular_courses ">
 			<div className="container">
@@ -50,128 +51,6 @@ export default function Books(props) {
 								<div className="authr_meta">
 									<img
 										src="/images/courses/author1.png"
-										alt=""
-									/>
-									<span className="d-inline-block ml-2">
-										Cameron
-									</span>
-								</div>
-								<div className="mt-lg-0 mt-3">
-									<span className="meta_info mr-4">
-										<a href="#">
-											{" "}
-											<i className="ti-user mr-2">
-												<FaUser />
-											</i>
-											25{" "}
-										</a>
-									</span>
-									<span className="meta_info">
-										<a href="#">
-											{" "}
-											<i className="ti-heart mr-2">
-												<FaHeart />
-											</i>
-											35{" "}
-										</a>
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div className="col-lg-4 col-md-6 col-sm-12 single_course">
-						<div className="course_head">
-							<img
-								className="img-fluid"
-								style={{ width: `100%`, height: `25rem` }}
-								src="/images/cover2.jpg"
-								alt="course2"
-							/>
-						</div>
-						<div className="course_content">
-							<span className="tag mb-4 d-inline-block">
-								<Link href="/">
-									<a
-										style={{
-											color: `#fff`,
-										}}
-									>
-										Read More
-									</a>
-								</Link>
-							</span>
-							<h4 className="mb-3">
-								<a href="course-details.html">
-									Social Media Network
-								</a>
-							</h4>
-
-							<div className="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4">
-								<div className="authr_meta">
-									<img
-										src="/images/courses/author2.png"
-										alt=""
-									/>
-									<span className="d-inline-block ml-2">
-										Cameron
-									</span>
-								</div>
-								<div className="mt-lg-0 mt-3">
-									<span className="meta_info mr-4">
-										<a href="#">
-											{" "}
-											<i className="ti-user mr-2">
-												<FaUser />
-											</i>
-											25{" "}
-										</a>
-									</span>
-									<span className="meta_info">
-										<a href="#">
-											{" "}
-											<i className="ti-heart mr-2">
-												<FaHeart />
-											</i>
-											35{" "}
-										</a>
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div className="col-lg-4 col-md-6 col-sm-12 single_course">
-						<div className="course_head">
-							<img
-								className="img-fluid"
-								style={{ width: `100%`, height: `25rem` }}
-								src="/images/cover3.png"
-								alt="course3"
-							/>
-						</div>
-						<div className="course_content">
-							<span className="tag mb-4 d-inline-block">
-								<Link href="/">
-									<a
-										style={{
-											color: `#fff`,
-										}}
-									>
-										Read More
-									</a>
-								</Link>
-							</span>
-							<h4 className="mb-3">
-								<a href="course-details.html">
-									Histories Demes{" "}
-								</a>
-							</h4>
-
-							<div className="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4">
-								<div className="authr_meta">
-									<img
-										src="/images/courses/author3.png"
 										alt=""
 									/>
 									<span className="d-inline-block ml-2">

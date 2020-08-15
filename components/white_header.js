@@ -6,7 +6,7 @@ export default function WhiteHeader() {
 			<div className="main_menu">
 				<nav className="navbar navbar-expand-lg navbar-light">
 					<div className="container">
-						<a className="navbar-brand" href="index.html">
+						<a className="navbar-brand" href="/">
 							<img
 								className="logo-2"
 								src="/images/logo2.png"
@@ -32,23 +32,17 @@ export default function WhiteHeader() {
 						>
 							<ul className="nav navbar-nav menu_nav ml-auto">
 								<li className="nav-item">
-									<Link href="/" activeClassName="active">
+									<Link href="/">
 										<a className="nav-link">Home</a>
 									</Link>
 								</li>
 								<li className="nav-item">
-									<Link
-										href="/about"
-										activeClassName="active"
-									>
+									<Link href="/about">
 										<a className="nav-link">About</a>
 									</Link>
 								</li>
 								<li className="nav-item submenu dropdown">
-									<Link
-										href="/books"
-										activeClassName="active"
-									>
+									<Link href="/books">
 										<a
 											className="nav-link dropdown-toggle"
 											data-toggle="dropdown"
@@ -61,7 +55,7 @@ export default function WhiteHeader() {
 									</Link>
 								</li>
 								<li className="nav-item submenu dropdown">
-									<Link href="/blog" activeClassName="active">
+									<Link href="/blog">
 										<a
 											className="nav-link dropdown-toggle"
 											data-toggle="dropdown"
@@ -74,10 +68,7 @@ export default function WhiteHeader() {
 									</Link>
 								</li>
 								<li className="nav-item">
-									<Link
-										href="/contact"
-										activeClassName="active"
-									>
+									<Link href="/contact">
 										<a className="nav-link">Contact</a>
 									</Link>
 								</li>
