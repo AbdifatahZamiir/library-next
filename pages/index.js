@@ -7,16 +7,28 @@ import Registration from "../components/registration";
 import Team from "../components/team";
 import Events from "../components/events";
 import Books from "../components/books";
-export default function Home() {
+
+import { getSortedPostsData } from "../lib/posts";
+
+export default function Home({ allPostsData }) {
 	return (
 		<Layout>
 			<Slider />
 			<Awesome />
-			<Books />
+			<Books posts={allPostsData} />
 			<Registration />
 			<Team />
 			<Events />
 			<Popular />
 		</Layout>
 	);
+}
+
+export async function getStaticProps() {
+	const allPostsData = await getSortedPostsData();
+	return {
+		props: {
+			allPostsData,
+		},
+	};
 }
