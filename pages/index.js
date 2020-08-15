@@ -1,3 +1,8 @@
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import remark from "remark";
+import html from "remark-html";
 import Head from "next/head";
 import Layout from "../components/layout";
 import Awesome from "../components/awesome";
@@ -8,16 +13,17 @@ import Team from "../components/team";
 import Events from "../components/events";
 import Books from "../components/books";
 
-import { getSortedPostsData } from "../lib/posts";
+import { getSortedBooksData, getSortedTeamsData } from "../lib/homedata";
 
-export default function Home({ allPostsData }) {
+export default function Home({ bookdata, teamdata }) {
 	return (
 		<Layout>
 			<Slider />
 			<Awesome />
-			<Books posts={allPostsData} />
+			<Books bookdata={bookdata} />
+
 			<Registration />
-			<Team />
+			<Team teamdata={teamdata} />
 			<Events />
 			<Popular />
 		</Layout>
@@ -25,10 +31,13 @@ export default function Home({ allPostsData }) {
 }
 
 export async function getStaticProps() {
-	const allPostsData = await getSortedPostsData();
+	const bookdata = await getSortedBooksData();
+	const teamdata = await getSortedTeamsData();
+
 	return {
 		props: {
-			allPostsData,
+			bookdata,
+			teamdata,
 		},
 	};
 }

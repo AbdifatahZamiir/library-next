@@ -1,7 +1,7 @@
 import { FaUser, FaHeart } from "react-icons/fa";
 import Link from "next/link";
 
-export default function Books({ posts }) {
+export default function Books({ bookdata }) {
 	return (
 		<div className="popular_courses ">
 			<div className="container">
@@ -19,7 +19,7 @@ export default function Books({ posts }) {
 			</div>
 			<div className="container">
 				<div className="row">
-					{posts.map((post) => {
+					{bookdata.map((post) => {
 						const {
 							id,
 							bookImg,
@@ -30,7 +30,10 @@ export default function Books({ posts }) {
 							like,
 						} = post;
 						return (
-							<div className="col-lg-4 col-md-6 col-sm-12 single_course">
+							<div
+								className="col-lg-4 col-md-6 col-sm-12 single_course"
+								key={id}
+							>
 								<div className="	course_head">
 									<img
 										className="img-fluid"
@@ -45,8 +48,8 @@ export default function Books({ posts }) {
 								<div className="course_content">
 									<span className="tag mb-4 d-inline-block">
 										<Link
-											href="/posts/[id]"
-											as={`/posts/${id}`}
+											href="/books/[id]"
+											as={`/books/${id}`}
 										>
 											<a
 												style={{

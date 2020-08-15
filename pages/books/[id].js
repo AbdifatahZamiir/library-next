@@ -1,7 +1,10 @@
 import Layout from "../../components/layout";
 import Banner from "../../components/banner_area";
-import { getPostData, getAllPostIds } from "../../lib/posts";
-
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import remark from "remark";
+import html from "remark-html";
 export default function book({ postData }) {
 	return (
 		<Layout white="white-header">
@@ -178,7 +181,15 @@ export default function book({ postData }) {
 }
 
 export async function getStaticPaths() {
-	const paths = getAllPostIds();
+	const myDirectory = path.join(process.cwd(), `contents/books`);
+	const filenames = fs.readdirSync(myDirectory);
+	const paths = filenames.map((fileName) => {
+		return {
+			params: {
+				id: fileName.replace(/\.md$/, ""),
+			},
+		};
+	});
 	return {
 		paths,
 		fallback: false,
@@ -186,7 +197,18 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-	const postData = await getPostData(params.id);
+	const myDirectory = path.join(process.cwd(), `contents/books`);
+	const { id } = params;
+	const fullPath = path.join(myDirectory, `${params.id}.md`);
+	const fileContents = fs.readFileSync(fullPath, "utf8");
+
+	const matterResult = matter(fileContents);
+	const processedContent = await remark()
+		.use(html)
+		.process(matterResult.content);
+	const contentHtml = processedContent.toString();
+	const postData = { contentHtml, ...matterResult.data };
+
 	return {
 		props: {
 			postData,

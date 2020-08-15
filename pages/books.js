@@ -2,7 +2,12 @@ import { FaUser, FaHeart } from "react-icons/fa";
 import Link from "next/link";
 import Banner from "../components/banner_area";
 import Layout from "../components/layout";
-import { getSortedPostsData } from "../lib/posts";
+
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import remark from "remark";
+import html from "remark-html";
 
 
 export default function Books({ allPostsData }) {
@@ -43,8 +48,8 @@ export default function Books({ allPostsData }) {
 								>
 									<div className="course_head">
 										<Link
-											href="/posts/[id]"
-											as={`/posts/${id}`}
+											href="/books/[id]"
+											as={`/books/${id}`}
 										>
 											<a>
 												<img
@@ -62,8 +67,8 @@ export default function Books({ allPostsData }) {
 									<div className="course_content">
 										<span className="tag mb-4 d-inline-block">
 											<Link
-												href="/posts/[id]"
-												as={`/posts/${id}`}
+												href="/books/[id]"
+												as={`/books/${id}`}
 											>
 												<a
 													style={{
@@ -126,7 +131,23 @@ export default function Books({ allPostsData }) {
 }
 
 export async function getStaticProps() {
-	const allPostsData = await getSortedPostsData();
+	const directory = path.join(process.cwd(), `contents/books`);
+	const fileNames = fs.readdirSync(directory);
+	const allPostsData = fileNames.map((fileName) => {
+		// Remove ".md" from file name to get id
+		const id = fileName.replace(/\.md$/, "");
+
+		// Read markdown file as string
+		const fullPath = path.join(`contents/books`, fileName);
+		const fileContents = fs.readFileSync(fullPath, "utf8");
+
+		// Use gray-matter to parse the post metadata section
+		const matterResult = matter(fileContents);
+		return {
+			id,
+			...matterResult.data,
+		};
+	});
 	return {
 		props: {
 			allPostsData,
