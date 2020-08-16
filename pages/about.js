@@ -1,26 +1,21 @@
 import Layout from "../components/layout";
 import Banner from "../components/banner_area";
-
-
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import remark from "remark";
 import html from "remark-html";
 
-export default function About({ allPostsData }) {
+export default function About({ postData }) {
+		const {	id,	aboutImage,	title} = postData;
 	return (
 		<Layout white="white-header">
 			<Banner title="About" home="Home " path="about" />
 			<section className="about_area section_gap">
 				<div className="container">
-						{allPostsData.map((post) => {
-							const {
-								id,
-								aboutImage,
-								title,
-							} = post;
-							return (
+						
+						
+						
 								<div className="row h_blog_item" key={aboutImage}>
 						<div className="col-lg-6">
 							<div className="h_blog_img">
@@ -36,7 +31,7 @@ export default function About({ allPostsData }) {
 								<div className="h_blog_text_inner left right">
 									<h4>{title}</h4>
 									<div dangerouslySetInnerHTML={{
-											__html: post.contentHtml,
+											__html: postData.contentHtml,
 										}}>
 
 									</div>
@@ -55,8 +50,7 @@ export default function About({ allPostsData }) {
 							</div>
 						</div>
 					</div>
-										);
-						})}
+					
 
 					
 				</div>
@@ -157,26 +151,21 @@ export default function About({ allPostsData }) {
 
 
 export async function getStaticProps() {
-	const directory = path.join(process.cwd(), `contents/about`);
-	const fileNames = fs.readdirSync(directory);
-	const allPostsData = fileNames.map((fileName) => {
-		// Remove ".md" from file name to get id
-		const id = fileName.replace(/\.md$/, "");
+	const myDirectory = path.join(process.cwd(), `contents/about`);
+	const id = "aboutPage";
+	const fullPath = path.join(myDirectory, `${id}.md`);
+	const fileContents = fs.readFileSync(fullPath, "utf8");
 
-		// Read markdown file as string
-		const fullPath = path.join(`contents/about`, fileName);
-		const fileContents = fs.readFileSync(fullPath, "utf8");
+	const matterResult = matter(fileContents);
+	const processedContent = await remark()
+		.use(html)
+		.process(matterResult.content);
+	const contentHtml = processedContent.toString();
+	const postData = { contentHtml, ...matterResult.data };
 
-		// Use gray-matter to parse the post metadata section
-		const matterResult = matter(fileContents);
-		return {
-			id,
-			...matterResult.data,
-		};
-	});
 	return {
 		props: {
-			allPostsData,
+			postData,
 		},
 	};
 }
