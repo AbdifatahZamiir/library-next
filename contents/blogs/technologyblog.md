@@ -1,7 +1,8 @@
 ---
-title: "Blog One "
-authorName: "Ali Ahmed"
-avatar: "/images/courses/author3.png"
+title: Custom Product Design
+blogImg: "/images/courses/c3.jpg"
+category: Writing
+description: One make creepeth man bearing their one firmament won't fowl meat over sea
 ---
 
 ## What is Lorem Ipsum?

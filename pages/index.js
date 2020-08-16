@@ -7,25 +7,28 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import Awesome from "../components/awesome";
 import Slider from "../components/slider";
-import Popular from "../components/popular";
+import Blogs from "../components/blogs";
 import Registration from "../components/registration";
 import Team from "../components/team";
 import Events from "../components/events";
 import Books from "../components/books";
 
-import { getSortedBooksData, getSortedTeamsData } from "../lib/homedata";
+import {
+	getSortedBooksData,
+	getSortedTeamsData,
+	getSortedBlogData,
+} from "../lib/homedata";
 
-export default function Home({ bookdata, teamdata }) {
+export default function Home({ bookdata, teamdata, blogdata }) {
 	return (
 		<Layout>
 			<Slider />
 			<Awesome />
 			<Books bookdata={bookdata} />
-
 			<Registration />
 			<Team teamdata={teamdata} />
 			<Events />
-			<Popular />
+			<Blogs blogdata={blogdata} />
 		</Layout>
 	);
 }
@@ -33,11 +36,13 @@ export default function Home({ bookdata, teamdata }) {
 export async function getStaticProps() {
 	const bookdata = await getSortedBooksData();
 	const teamdata = await getSortedTeamsData();
+	const blogdata = await getSortedBlogData();
 
 	return {
 		props: {
 			bookdata,
 			teamdata,
+			blogdata,
 		},
 	};
 }
