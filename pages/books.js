@@ -13,7 +13,7 @@ export default function Books({ allPostsData }) {
 	return (
 		<Layout white="white-header">
 			<Banner title="Books" home="Home " path="books" />
-			<div className="popular_courses mt-4">
+			<div className="popular_courses mt-5">
 				<div className="container">
 					<div className="row justify-content-center">
 						<div className="col-lg-5">

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Books({ bookdata }) {
 	return (
-		<div className="popular_courses ">
+		<div className="popular_courses mt-5">
 			<div className="container">
 				<div className="row justify-content-center">
 					<div className="col-lg-5">

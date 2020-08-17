@@ -1,11 +1,11 @@
 export default function Awesome() {
 	return (
-		<section className="feature_area section_gap_top">
+		<section className="feature_area section_gap_top title-bg">
 			<div className="container">
 				<div className="row justify-content-center">
 					<div className="col-lg-5">
 						<div className="main_title">
-							<h2 className="mb-3">Awesome Feature</h2>
+							<h2 className="mb-3 text-white">Awesome Feature</h2>
 							<p>
 								Replenish man have thing gathering lights
 								yielding shall you

@@ -8,9 +8,7 @@ import Layout from "../components/layout";
 import Awesome from "../components/awesome";
 import Slider from "../components/slider";
 import Blogs from "../components/blogs";
-import Registration from "../components/registration";
 import Team from "../components/team";
-import Events from "../components/events";
 import Books from "../components/books";
 
 import {
@@ -24,11 +22,9 @@ export default function Home({ bookdata, teamdata, blogdata }) {
 	return (
 		<Layout>
 			<Slider />
-			<Awesome />
 			<Books bookdata={bookdata} />
-			<Registration />
+			<Awesome />
 			<Team teamdata={teamdata} />
-			<Events />
 			<Blogs blogdata={blogdata} />
 		</Layout>
 	);
