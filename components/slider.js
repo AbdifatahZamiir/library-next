@@ -8,24 +8,28 @@ export default function Slider() {
 						<div className="col-lg-12">
 							<div className="banner_content text-center">
 								<p className="text-uppercase">
-									Best online education service In the world
+									Find your books one place
 								</p>
 								<h2 className="text-uppercase mt-4 mb-5">
-									One Step Ahead This Season
+									Take your skill to the next level
 								</h2>
 								<div>
-									<a
-										href="#"
-										className="primary-btn2 mb-3 mb-sm-0"
-									>
-										learn more
-									</a>
-									<a
-										href="#"
-										className="primary-btn ml-sm-3 ml-0"
-									>
-										see course
-									</a>
+									<Link href="/about">
+										<a
+											style={{ textDecoration: `none` }}
+											className="primary-btn2 mb-3 mb-sm-0"
+										>
+											about library
+										</a>
+									</Link>
+									<Link href="/books">
+										<a
+											style={{ textDecoration: `none` }}
+											className="primary-btn ml-sm-3 ml-0"
+										>
+											see books
+										</a>
+									</Link>
 								</div>
 							</div>
 						</div>

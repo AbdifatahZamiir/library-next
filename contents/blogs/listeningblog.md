@@ -1,15 +1,15 @@
 ---
 title: Listening audio books
-blogImg: "/images/courses/c1.jpg"
+blogImg: "/images/blog/main-blog/m-blog-2.jpg"
 category: Listening
+author: "Caasha Hassan"
+authorImg: "/images/blog/author.png"
+authorStatus: Senior Blog Writer
 description: One make creepeth man bearing their one firmament won't fowl meat over sea
 ---
 
-## What is Lorem Ipsum?
+MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-like Aldus PageMaker including versions of Lorem Ipsum.
+Boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed
+
+Boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed

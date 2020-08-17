@@ -8,7 +8,11 @@ import html from "remark-html";
 export default function book({ postData }) {
 	return (
 		<Layout white="white-header">
-			<Banner title="Book Details" home="Home " path={postData.title} />
+			<Banner
+				title="Book Details"
+				home="Home"
+				path="book / bookDetails"
+			/>
 			<section className="course_details_area section_gap">
 				<div className="container">
 					<div className="row">
@@ -31,7 +35,7 @@ export default function book({ postData }) {
 									/>
 								</div>
 
-								<h4 className="title">Course Outline</h4>
+								<h4 className="title">Book Contents</h4>
 								<div className="content">
 									<ul className="course_list">
 										<li className="justify-content-between d-flex">

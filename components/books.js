@@ -61,9 +61,12 @@ export default function Books({ bookdata }) {
 										</Link>
 									</span>
 									<h4 className="mb-3">
-										<a href="course-details.html">
-											{title}
-										</a>
+										<Link
+											href="/books/[id]"
+											as={`/books/${id}`}
+										>
+											<a>{title}</a>
+										</Link>
 									</h4>
 
 									<div className="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4">

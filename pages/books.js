@@ -80,8 +80,8 @@ export default function Books({ allPostsData }) {
 										</span>
 										<h4 className="mb-3">
 											<Link
-												href="/posts/[id]"
-												as={`/posts/${id}`}
+												href="/books/[id]"
+												as={`/books/${id}`}
 											>
 												<a
 													style={{

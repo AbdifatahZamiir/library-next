@@ -1,6 +1,5 @@
-import Carousel from "react-bootstrap/Carousel";
 import styled from "styled-components";
-
+import Link from "next/link";
 export default function Blogs({ blogdata }) {
 	return (
 		<div className="popular_courses ">
@@ -17,39 +16,40 @@ export default function Blogs({ blogdata }) {
 					</div>
 				</div>
 			</div>
-
-			<Carousel>
-				<Carousel.Item>
-					<div className="row">
-						{blogdata.map(
-							({ title, blogImg, description, category }) => (
-								<Carousel.Item>
-									<div className="col-lg-4 col-md-6 col-sm-12 single_course">
-										<div className="course_head">
-											<img
-												className="img-fluid"
-												src={blogImg}
-												alt="course2"
-											/>
-										</div>
-										<div className="course_content">
-											<span className="tag mb-4 d-inline-block">
-												{category}
-											</span>
-											<h4 className="mb-3">
-												<a href="course-details.html">
-													{title}
-												</a>
-											</h4>
-											<p>{description}</p>
-										</div>
-									</div>
-								</Carousel.Item>
-							)
-						)}
-					</div>
-				</Carousel.Item>
-			</Carousel>
+			<div className="container">
+				<div className="row">
+					{blogdata.map(
+						({ title, blogImg, description, category, id }) => (
+							<div
+								className="col-lg-4 col-md-6 col-sm-12 single_course"
+								key={id}
+							>
+								<div className="course_head">
+									<img
+										className="img-fluid"
+										src={blogImg}
+										alt="course2"
+									/>
+								</div>
+								<div className="course_content">
+									<span className="tag mb-4 d-inline-block">
+										{category}
+									</span>
+									<h4 className="mb-3">
+										<Link
+											href="/blogDetails/[id]"
+											as={`/blogDetails/${id}`}
+										>
+											<a>{title}</a>
+										</Link>
+									</h4>
+									<p>{description}</p>
+								</div>
+							</div>
+						)
+					)}
+				</div>
+			</div>
 		</div>
 	);
 }

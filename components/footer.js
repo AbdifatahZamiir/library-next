@@ -4,7 +4,7 @@ export default function Footer() {
 			<div className="container">
 				<div className="row">
 					<div className="col-lg-2 col-md-6 single-footer-widget">
-						<h4>Top Products</h4>
+						<h4 className="text-white">Top Products</h4>
 						<ul>
 							<li>
 								<a href="#">Managed Website</a>
@@ -21,7 +21,7 @@ export default function Footer() {
 						</ul>
 					</div>
 					<div className="col-lg-2 col-md-6 single-footer-widget">
-						<h4>Quick Links</h4>
+						<h4 className="text-white">Quick Links</h4>
 						<ul>
 							<li>
 								<a href="#">Jobs</a>
@@ -38,7 +38,7 @@ export default function Footer() {
 						</ul>
 					</div>
 					<div className="col-lg-2 col-md-6 single-footer-widget">
-						<h4>Features</h4>
+						<h4 className="text-white">Features</h4>
 						<ul>
 							<li>
 								<a href="#">Jobs</a>
@@ -55,7 +55,7 @@ export default function Footer() {
 						</ul>
 					</div>
 					<div className="col-lg-2 col-md-6 single-footer-widget">
-						<h4>Resources</h4>
+						<h4 className="text-white">Resources</h4>
 						<ul>
 							<li>
 								<a href="#">Guides</a>
@@ -72,7 +72,7 @@ export default function Footer() {
 						</ul>
 					</div>
 					<div className="col-lg-4 col-md-6 single-footer-widget">
-						<h4>Newsletter</h4>
+						<h4 className="text-white">Newsletter</h4>
 						<p>You can trust us. we only send promo offers,</p>
 						<div className="form-wrap" id="mc_embed_signup">
 							<form
@@ -116,7 +116,7 @@ export default function Footer() {
 						reserved | This template is made with{" "}
 						<i className="ti-heart" aria-hidden="true"></i> by{" "}
 						<a href="https://colorlib.com" target="_blank">
-							Colorlib
+							eLIBRARY
 						</a>
 					</p>
 					<div className="col-lg-4 col-sm-12 footer-social">

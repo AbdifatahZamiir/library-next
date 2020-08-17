@@ -51,7 +51,7 @@ export default function Header() {
 									</Link>
 								</li>
 								<li className="nav-item submenu dropdown">
-									<Link href="/blog">
+									<Link href="/blogs">
 										<a
 											className="nav-link dropdown-toggle"
 											data-toggle="dropdown"
