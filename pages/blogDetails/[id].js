@@ -13,7 +13,6 @@ import Banner from "../../components/banner_area";
 import PopularBlog from "../../components/popularBlogs";
 
 export default function BlogDetail({ postData, allpostdata }) {
-	console.log(postData, allpostdata);
 	return (
 		<Layout white="white-header">
 			<Banner
