@@ -9,6 +9,7 @@ import matter from "gray-matter";
 import remark from "remark";
 import html from "remark-html";
 
+
 export default function Books({ allPostsData }) {
 	return (
 		<Layout white="white-header">
@@ -27,6 +28,7 @@ export default function Books({ allPostsData }) {
 						</div>
 					</div>
 				</div>
+				
 				<div className="container">
 					<div className="row">
 						{allPostsData.map((post) => {
@@ -120,9 +122,11 @@ export default function Books({ allPostsData }) {
 							);
 						})}
 					</div>
-				</div>
-			</div>
-		</Layout>
+					))}
+
+					</div>
+					</div>
+          		</Layout>
 	);
 }
 

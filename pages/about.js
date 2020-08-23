@@ -1,17 +1,27 @@
 import Layout from "../components/layout";
 import Banner from "../components/banner_area";
-export default function About() {
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import remark from "remark";
+import html from "remark-html";
+
+export default function About({ postData }) {
+		const {	id,	aboutImage,	title} = postData;
 	return (
 		<Layout white="white-header">
 			<Banner title="About" home="Home " path="about" />
 			<section className="about_area section_gap">
 				<div className="container">
-					<div className="row h_blog_item">
+						
+						
+						
+								<div className="row h_blog_item" key={aboutImage}>
 						<div className="col-lg-6">
 							<div className="h_blog_img">
 								<img
 									className="img-fluid"
-									src="/images/about.png"
+									src={aboutImage}
 									alt=""
 								/>
 							</div>
@@ -19,13 +29,12 @@ export default function About() {
 						<div className="col-lg-6">
 							<div className="h_blog_text">
 								<div className="h_blog_text_inner left right">
-									<h4>Welcome to our Institute</h4>
-									<p>
-										Subdue whales void god which living
-										don't midst lesser yielding over lights
-										whose. Cattle greater brought sixth fly
-										den dry good tree isn't seed stars were.
-									</p>
+									<h4>{title}</h4>
+									<div dangerouslySetInnerHTML={{
+											__html: postData.contentHtml,
+										}}>
+
+									</div>
 									<p>
 										Subdue whales void god which living
 										don't midst lesser yieldi over lights
@@ -41,6 +50,9 @@ export default function About() {
 							</div>
 						</div>
 					</div>
+					
+
+					
 				</div>
 			</section>
 			<section className="feature_area section_gap_top title-bg mb-5">
@@ -135,4 +147,25 @@ export default function About() {
 			</section>
 		</Layout>
 	);
+}
+
+
+export async function getStaticProps() {
+	const myDirectory = path.join(process.cwd(), `contents/about`);
+	const id = "aboutPage";
+	const fullPath = path.join(myDirectory, `${id}.md`);
+	const fileContents = fs.readFileSync(fullPath, "utf8");
+
+	const matterResult = matter(fileContents);
+	const processedContent = await remark()
+		.use(html)
+		.process(matterResult.content);
+	const contentHtml = processedContent.toString();
+	const postData = { contentHtml, ...matterResult.data };
+
+	return {
+		props: {
+			postData,
+		},
+	};
 }
