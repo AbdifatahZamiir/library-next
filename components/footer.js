@@ -1,5 +1,7 @@
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
+
+import SubscribeForm from "./subscribeForm";
 export default function Footer() {
 	return (
 		<footer className="footer-area section_gap">
@@ -43,37 +45,7 @@ export default function Footer() {
 						<h5 className="text-white">Newsletter</h5>
 						<p>You can trust us. we only send promo offers,</p>
 						<div className="form-wrap" id="mc_embed_signup">
-							<form
-								target="_blank"
-								action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-								method="get"
-								className="form-inline"
-							>
-								<input
-									className="form-control"
-									name="EMAIL"
-									placeholder="Your Email Address"
-									required=""
-									type="email"
-								/>
-								<button className="click-btn btn btn-default">
-									<span>subscribe</span>
-								</button>
-								<div
-									style={{
-										position: `absolute`,
-										left: `-5000px`,
-									}}
-								>
-									<input
-										name="b_36c4fd991d266f23781ded980_aefe40901a"
-										tabIndex="-1"
-										type="text"
-									/>
-								</div>
-
-								<div className="info"></div>
-							</form>
+							<SubscribeForm />
 						</div>
 					</div>
 				</div>

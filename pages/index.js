@@ -18,7 +18,6 @@ import {
 } from "../lib/homedata";
 
 export default function Home({ bookdata, teamdata, blogdata }) {
-	console.log(blogdata);
 	return (
 		<Layout>
 			<Slider />
