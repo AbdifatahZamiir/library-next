@@ -35,6 +35,7 @@ export default function ContactForm() {
 			email: "",
 			message: "",
 		},
+
 		validationSchema: Yup.object({
 			firstName: Yup.string()
 				.max(20, "Must be 20 character or less")
@@ -48,8 +49,14 @@ export default function ContactForm() {
 		}),
 		onSubmit: (values) => {
 			alert(JSON.stringify(values, null, 2));
+			values.firstName = "";
+			values.lastName = "";
+			values.email = "";
+			values.message = "";
 		},
 	});
+
+	console.log(formik);
 	return (
 		<form
 			className="row contact_form"
@@ -65,6 +72,7 @@ export default function ContactForm() {
 								? "form-control is-invalid"
 								: "form-control is-valid"
 						}
+						onBlur={formik.handleBlur}
 						id="firstName"
 						name="firstName"
 						placeholder="Enter your First Name"
@@ -86,6 +94,8 @@ export default function ContactForm() {
 								? "form-control is-invalid"
 								: "form-control is-valid"
 						}
+						onBlur={formik.handleBlur}
+						onFocus={formik.handleFocus}
 						id="lastName"
 						name="lastName"
 						placeholder="Enter your Last Name"
@@ -106,6 +116,7 @@ export default function ContactForm() {
 								? "form-control is-invalid"
 								: "form-control is-valid"
 						}
+						onBlur={formik.handleBlur}
 						id="email"
 						name="email"
 						placeholder="Enter email address"
